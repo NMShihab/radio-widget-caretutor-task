@@ -1,17 +1,18 @@
 .listcontainer {
   padding: 5px;
+  border-bottom: 0.5px solid #a2abbd;
 }
 
 .list {
   display: flex;
   justify-content: space-between;
-  border-bottom: 0.5px solid #a2abbd;
+  /* border-bottom: 0.5px solid #a2abbd; */
   padding-left: 8px;
   padding-right: 8px;
   cursor: pointer;
 }
 
-.list:last-child {
+.listcontainer:last-child {
   border: none;
 }
 
