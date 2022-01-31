@@ -1,5 +1,25 @@
 .bodypart {
-  height: 300px;
+  height: 350px;
   background: #2f303b;
   border-bottom: 1px white;
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2f303b;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(237, 174, 97, 0.801);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

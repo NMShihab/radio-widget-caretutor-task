@@ -1,0 +1,27 @@
+.listcontainer {
+  padding: 5px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #a2abbd;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+}
+
+.list:last-child {
+  border: none;
+}
+
+.fmname {
+  font-weight: 400;
+  color: #a2abbd;
+  font-size: 1.3rem;
+}
+
+.fid {
+  color: #a2abbd;
+  font-size: 1.3rem;
+}

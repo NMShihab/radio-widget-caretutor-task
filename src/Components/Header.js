@@ -8,7 +8,7 @@ const Header = () => {
     <div className={style.header}>
       <div className={style.container}>
         <img src={backArrow} alt="back-arrow" />
-        <h1>HEADER</h1>
+        <h1>STATIONS</h1>
         <img src={swich} alt="switch" />
       </div>
     </div>
