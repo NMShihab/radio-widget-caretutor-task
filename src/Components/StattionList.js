@@ -1,22 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
 import Player from "./Player";
 import Data from "../Data/Data";
+import { useSelector, useDispatch } from "react-redux";
+import { playAction } from "../actions/playAction";
 import style from "./StationList.module.css";
 
 const StattionList = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [value, setValue] = useState(0);
+  const { station } = useSelector((state) => state);
+  const dispatch = useDispatch();
+  console.log(station);
 
   return (
     <div className={style.listcontainer}>
       {Data.map((d) => (
         <div className={style.listcontainer} key={d.id}>
-          {isOpen && d.id == value && <Player />}
+          {Object.keys(station).length !== 0 && d.id === station.payload.id && (
+            <Player />
+          )}
           <li
             className={style.list}
             onClick={() => {
-              setValue(d.id);
-              setIsOpen(!isOpen);
+              dispatch(
+                playAction({
+                  id: d.id,
+                  sname: d.sname,
+                })
+              );
             }}
           >
             <h2 className={style.fmname}>{d.sname}</h2>
