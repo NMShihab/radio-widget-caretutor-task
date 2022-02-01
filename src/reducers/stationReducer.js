@@ -5,14 +5,7 @@ const stationReducer = (state = {}, { type, payload }) => {
         if (state.station.id === payload.id) {
           return {};
         }
-        // const existStation = state.station.find((x) => x.id === payload.id);
-        // if (existStation) {
-        //   return {};
-        // }
       }
-      // if (state) {
-      //
-      // }
       const station = payload;
       return { station };
     default:
