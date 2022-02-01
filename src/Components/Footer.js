@@ -8,8 +8,8 @@ const Footer = () => {
     <div className={style.footerpart}>
       {Object.keys(station).length !== 0 && (
         <div>
-          <p>currently Playing</p>
-          <h5>{station.payload.sname} playing</h5>
+          <p className={style.ptext}>currently Playing</p>
+          <span className={style.sptext}>{station.station.sname}</span>
         </div>
       )}
     </div>

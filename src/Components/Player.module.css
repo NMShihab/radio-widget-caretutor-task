@@ -3,11 +3,11 @@
   justify-content: space-between;
 }
 .iconimg {
-  padding-top: 30px;
+  padding-top: 80px;
   height: 25px;
   cursor: pointer;
 }
 
 .iconellipse {
-  height: 100px;
+  height: 150px;
 }

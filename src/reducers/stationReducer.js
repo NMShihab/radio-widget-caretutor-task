@@ -2,7 +2,7 @@ const stationReducer = (state = {}, { type, payload }) => {
   switch (type) {
     case "PLAY":
       if (Object.keys(state).length !== 0) {
-        if (state.payload.id === payload.id) {
+        if (state.station.id === payload.id) {
           return {};
         }
         // const existStation = state.station.find((x) => x.id === payload.id);
@@ -13,7 +13,8 @@ const stationReducer = (state = {}, { type, payload }) => {
       // if (state) {
       //
       // }
-      return { payload };
+      const station = payload;
+      return { station };
     default:
       return state;
   }

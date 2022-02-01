@@ -8,13 +8,12 @@ import style from "./StationList.module.css";
 const StattionList = () => {
   const { station } = useSelector((state) => state);
   const dispatch = useDispatch();
-  console.log(station);
 
   return (
     <div className={style.listcontainer}>
       {Data.map((d) => (
         <div className={style.listcontainer} key={d.id}>
-          {Object.keys(station).length !== 0 && d.id === station.payload.id && (
+          {Object.keys(station).length !== 0 && d.id === station.station.id && (
             <Player />
           )}
           <li
